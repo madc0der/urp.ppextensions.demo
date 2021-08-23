@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <div id="unity-container" class="unity-desktop">
+
+    <div>
+      <h2>URP Post-Processing Extensions: motion blur, sun shafts and realistic water.</h2>
+      <br/>
+      <br/>
+      <b><i>
+        In order to run on low-end video cards in WebGL mode, scene was simplified, blur passes was reduced to one iteration and
+        overal downsample was set to "2" which is quater of initial resolution.<br/>
+        Set "Downsample" slider to zero for better quality, but amount of passes in not controllable in demo. Better image can be found in assetstore video.
+      </i></b>
+    </div>
+
+    <div id="unity-container" class="unity-desktop" style="margin-top: 150px">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -25,6 +37,7 @@
         <div id="unity-build-title">URP PP Extensions</div>
       </div>
     </div>
+
     <script>
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Build-WebGL-Simplified.loader.js";
